@@ -41,7 +41,7 @@ declare type Options<T, U extends keyof T = never> = RequiredIn<Partial<T>, U>
 
 
 /** Functional types */
-declare namespace FunctionalSync {
+declare namespace Functional {
   // generic functionals
 
   /** A functional type that creates values from no input */
@@ -57,7 +57,7 @@ declare namespace FunctionalSync {
   type Operator<T extends any[] = [], V = void> = (...args: T) => V
 }
 
-declare namespace Functional {
+declare namespace FunctionalAsync {
   // generic async functinals
 
   /** An async functional type that creates values from no input */
@@ -70,7 +70,7 @@ declare namespace Functional {
   type Predicate<T extends any[]> = Operator<T, boolean>
 
   /** An async functional that *can* a given input and *can* process it to an output */
-  type Operator<T extends any[] = [], V = void> = FunctionalSync.Operator<T, Promise<V>>
+  type Operator<T extends any[] = [], V = void> = Functional.Operator<T, Promise<V>>
 }
 
 
