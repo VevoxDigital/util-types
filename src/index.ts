@@ -2,3 +2,4 @@
 
 export * from './interfaces'
 export * from './util/ordered'
+export * from './util/map'

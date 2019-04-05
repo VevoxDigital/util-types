@@ -1,8 +1,8 @@
 {
-  "name": "@vevox/util-types",
-  "version": "0.2.0",
+  "name": "@vevox/util-common",
+  "version": "0.1.0",
   "main": "lib/index.js",
-  "repository": "https://lab.vevox.io/open-source/util/types",
+  "repository": "https://lab.vevox.io/open-source/util/common",
   "author": "Vevox Digital",
   "license": "MIT",
   "engines": {
