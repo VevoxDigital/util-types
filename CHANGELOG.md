@@ -1,5 +1,8 @@
 ## DEVELOPMENT
 
+#### 0.2.1
+`*` Compilation changes  
+
 ### 0.2.0
 `+` Exceptions, an extension of the base JS Error  
 `*` Minor changes to `ComparableMap` to support the new exceptions  
