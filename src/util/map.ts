@@ -1,23 +1,24 @@
 
 import { IComparable, ISealable, ISerializeable } from '../interfaces'
-
-export interface IComparableMapOptions {
-    /** Allows this map to be cleared */
-    allowClear: boolean,
-
-    /** Allows values to be deleted from this map, including "updates" to existing keys */
-    allowDelete: boolean,
-
-    /** Allows the putting of empty values to keys */
-    allowEmpty: boolean
-}
+import { SealedAccessException } from '../exception/ex-sealed-access';
 
 /**
  * An implementation of the ES {@link Map} that uses the {@link IComparable} interface to compare objects rather than
- * using the ES equality operator.
+ * using the ES equality operator. Note that this does add more overhead than the standard ES {@link Map}, so it should
+ * only be used where the equality operator would not compare keys as desired.
  */
 export class ComparableMap<K extends IComparable<K>, V>
 implements Map<K, V>, ISealable, ISerializeable<Dictionary<V>> {
+
+  /**
+   * Creates a new map from the given value, then immediately seals it
+   * @param values The values to create with
+   */
+  public static createImmutable <K extends IComparable<K>, V> (...values: Array<[K, V]>): ComparableMap<K, V> {
+    const map = new ComparableMap<K, V>(...values)
+    map.seal()
+    return map
+  }
 
   public readonly [Symbol.toStringTag] = ComparableMap.name
 
@@ -53,7 +54,8 @@ implements Map<K, V>, ISealable, ISerializeable<Dictionary<V>> {
    * Clear all values from this map
    */
   public clear (): void {
-    if (!this._sealed) this.pairs.length = 0
+    SealedAccessException.check(this)
+    this.pairs.length = 0
   }
 
   /**
@@ -61,7 +63,7 @@ implements Map<K, V>, ISealable, ISerializeable<Dictionary<V>> {
    * @param key The key to delete
    */
   public delete (key: K): boolean {
-    if (this._sealed) return false
+    SealedAccessException.check(this)
 
     const index = this._get(key)
     if (index) {
@@ -108,7 +110,7 @@ implements Map<K, V>, ISealable, ISerializeable<Dictionary<V>> {
    * @param val The value to set
    */
   public set (key: K, val: V): this {
-    if (this._sealed) return this // TODO exception???
+    SealedAccessException.check(this)
 
     const i = this._get(key)
     if (i) this.pairs[i[0]] = [ key, val ]

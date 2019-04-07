@@ -3,6 +3,9 @@
   "compilerOptions": {
     "outDir": "lib/",
     "rootDir": "src/",
-    "declarationDir": "lib"
+    "declarationDir": "lib",
+    "types": [
+      "node"
+    ]
   }
 }

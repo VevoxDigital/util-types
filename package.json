@@ -1,6 +1,6 @@
 {
   "name": "@vevox/util-common",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "main": "lib/index.js",
   "repository": "https://lab.vevox.io/open-source/util/common",
   "author": "Vevox Digital",
@@ -10,6 +10,7 @@
   },
   "private": false,
   "devDependencies": {
+    "@types/node": "^11.13.0",
     "typescript": "3.4"
   }
 }
