@@ -1,8 +1,7 @@
 # Types
 A large collection of utility types and common module definitions
 
-![node (scoped with tag)](https://img.shields.io/node/v/@vevox/util-types/latest.svg?style=for-the-badge)
-
+![node (scoped)](https://img.shields.io/node/v/@vevox/util-types.svg?style=for-the-badge)
 ![npm (scoped with tag)](https://img.shields.io/npm/v/@vevox/util-types/latest.svg?style=for-the-badge&label=stable)
 ![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/VevoxDigital/util-types/develop.svg?label=unstable&style=for-the-badge)
 
