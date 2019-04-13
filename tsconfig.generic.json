@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "strict": true,
+    "experimentalDecorators": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "removeComments": false,
+    "downlevelIteration": true,
+
+    "module": "commonjs",
+    "moduleResolution": "node",
+
+    "declaration": true,
+  }
+}

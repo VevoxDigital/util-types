@@ -1,5 +1,5 @@
 {
-  "extends": "../../tsconfig.es5.json",
+  "extends": "./tsconfig.generic.json",
   "compilerOptions": {
     "outDir": "lib/",
     "rootDir": "src/",
@@ -9,6 +9,7 @@
     ]
   },
   "exclude": [
-    "lib"
+    "lib",
+    "node_modules"
   ]
 }
