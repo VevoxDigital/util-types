@@ -1,4 +1,4 @@
-import { Exception } from './exception';
+import { Exception } from './exception'
 
 /**
  * An exception raised when an operation is not supported for one reason or another

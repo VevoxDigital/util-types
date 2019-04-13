@@ -1,5 +1,5 @@
-import { Exception } from './exception';
-import { ISealable } from '../interfaces';
+import { ISealable } from '../interfaces'
+import { Exception } from './exception'
 
 /**
  * An exception raised when a sealable instance is sealed and something attempted to modify it

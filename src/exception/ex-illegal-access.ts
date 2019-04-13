@@ -1,4 +1,4 @@
-import { Exception } from './exception';
+import { Exception } from './exception'
 
 /**
  * An exception raised when an illegal access is attempted

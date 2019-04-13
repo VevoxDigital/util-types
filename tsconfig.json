@@ -4,6 +4,10 @@
     "outDir": "lib/",
     "rootDir": "src/",
     "declarationDir": "lib",
+
+    "target": "es5",
+    "lib": [ "es6" ],
+
     "types": [
       "node"
     ]

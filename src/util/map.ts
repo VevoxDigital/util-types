@@ -1,6 +1,6 @@
 
+import { SealedAccessException } from '../exception/ex-sealed-access'
 import { IComparable, ISealable, ISerializeable } from '../interfaces'
-import { SealedAccessException } from '../exception/ex-sealed-access';
 
 /**
  * An implementation of the ES {@link Map} that uses the {@link IComparable} interface to compare objects rather than
