@@ -38,7 +38,11 @@ declare type RequiredIn<T, U extends keyof T> = T & ExtractFrom<Required<T>, U>
 /** An object who extends `T`, where keys `U` are required and others are optional */
 declare type Options<T, U extends keyof T = never> = RequiredIn<Partial<T>, U>
 
+/** A pair of a given type */
+declare type Pair<T> = [ T, T ]
 
+/** A triple of a given type */
+declare type Triple<T> = [ T, T, T ]
 
 /** Functional types */
 declare namespace Functional {
@@ -244,8 +248,6 @@ declare namespace NPM {
     url: string
   }
 }
-
-
 
 declare module '*/package.json' {
   const packageJson: NPM.IPackageJSON
