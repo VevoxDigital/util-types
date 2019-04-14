@@ -1,5 +1,11 @@
 ## DEVELOPMENT
 
+### 0.3.0
+`+` New generic TSConfig and TSLint files  
+`+` New helper types (`Pair`, `Triple`)  
+`*` Minor changes to parameter names and docs  
+`*` Changes to match new TSLint configuration  
+
 #### 0.2.1
 `*` Compilation changes  
 
