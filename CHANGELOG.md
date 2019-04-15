@@ -1,5 +1,8 @@
 ## DEVELOPMENT
 
+#### 0.4.1
+`*` Properly export the new random  
+
 ### 0.4.0
 `+` New `SeededRandom`  
 

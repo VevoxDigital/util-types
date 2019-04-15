@@ -1,8 +1,9 @@
 /// <reference path="../index.d.ts" />
 
 export * from './interfaces'
-export * from './util/ordered'
 export * from './util/map'
+export * from './util/ordered'
+export * from './util/random'
 
 export * from './exception/exception'
 export * from './exception/ex-file-system'
