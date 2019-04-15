@@ -1,5 +1,8 @@
 ## DEVELOPMENT
 
+### 0.4.0
+`+` New `SeededRandom`  
+
 ### 0.3.0
 `+` New generic TSConfig and TSLint files  
 `+` New helper types (`Pair`, `Triple`)  
