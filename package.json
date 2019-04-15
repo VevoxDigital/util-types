@@ -1,6 +1,6 @@
 {
   "name": "@vevox/util-common",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "main": "lib/index.js",
   "repository": "https://lab.vevox.io/open-source/util/common",
   "author": "Vevox Digital",
